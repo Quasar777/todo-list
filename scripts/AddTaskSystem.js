@@ -103,7 +103,7 @@ function createNewTask(task) {
     newSpanElement.textContent = `${task}`
 
     newTaskElement.append(newCheckboxLabelElement)
-    newTaskElement.append(newSpanElement)
+    
     newCheckboxLabelElement.append(newSpanElement)
 
     return newTaskElement
