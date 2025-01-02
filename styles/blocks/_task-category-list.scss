@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.task-category-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    margin-top: rem(10);
+
+    &__item {
+        display: grid;
+        row-gap: rem(16);
+
+        &-title {
+            color: var(--color-categories);
+            margin-inline: rem(16);
+            font-weight: 600;
+        }
+    }
+}

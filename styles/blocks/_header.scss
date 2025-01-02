@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+.header {
+    &__inner {
+        padding-block: rem(30);
+        text-align: center;
+    }
+}

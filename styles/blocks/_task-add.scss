@@ -1,0 +1,27 @@
+@use '../helpers' as *; 
+
+.task-add {
+    display: grid;
+    grid-template-columns: auto 14%;
+    align-items: center;
+    column-gap: rem(12);
+    margin-top: rem(94);
+    
+    &__input {
+        background-color: var(--color-light-grey);
+        border: none;
+        border-radius: rem(12);
+        padding-block: rem(17);
+        padding-left: rem(21);   
+    }
+
+    &__button {
+        @include square(#{rem(54)});
+
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        border: none;
+        border-radius: rem(12);
+
+    }
+}

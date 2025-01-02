@@ -1,0 +1,9 @@
+@use '../helpers' as *;
+
+.task-card {
+    padding: rem(16); 
+    background-color: var(--color-light-grey);
+    border-radius: rem(12);
+
+
+}

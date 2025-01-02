@@ -1,0 +1,20 @@
+@use 'helpers' as *;
+
+:root {
+    --color-dark: #121212;
+    --color-light: #FFFFFF;
+    --color-light-10: #F9F5F4;
+    --color-categories: #D1A28B;
+    --color-day-card: #E6D9CB;
+    --color-grey: #9F9F9F;
+    --color-light-grey: #F3EFEE;
+    
+    --border: 1px solid #000000;
+
+    --container-width: #{rem(390)};
+    --container-padding-x: #{rem(22)};
+
+    --transition-duration: 0.2s;
+
+    --font-family-base: "Inter", sans-serif;
+}

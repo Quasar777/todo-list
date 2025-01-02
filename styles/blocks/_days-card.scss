@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+
+.days-card {
+    min-width: rem(68);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: rem(12);
+    padding-inline: rem(6);
+    row-gap: rem(8);
+    border: var(--border);
+    border-radius: rem(8);
+    font-weight: 600;
+    opacity: 0.2;
+
+}

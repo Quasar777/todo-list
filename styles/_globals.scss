@@ -1,0 +1,70 @@
+@use 'helpers' as *;
+
+html {
+    &.is-lock {
+        overflow: hidden;
+    }
+}
+
+body {
+    font-size: rem(17);
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--font-family-base);
+    color: var(--color-dark);
+    background-color: var(--color-light-10);
+}
+
+main {
+    flex-grow: 1;
+}
+
+
+// добавляем плавности для интерактивных элементов
+a,
+button,
+label,
+input,
+select, 
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+// глобальные стили для ссылок всего проекта
+a {
+    color: inherit;
+    
+    @include hover {
+        color: var(--color-accent);
+    }
+
+    // отклчаем подчеркивание только у тех ссылок, у которых задан класс 
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+:focus-visible {
+    outline-color: currentColor;
+    transition-duration: 0.2s;
+}
+
+a, 
+button {
+    &[aria-label] {
+        position: relative;
+
+        &::before {
+            @include abs-center;
+            @include square(rem(44));
+
+            content: '';
+
+        }
+    }
+
+    
+}

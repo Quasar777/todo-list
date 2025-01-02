@@ -1,0 +1,7 @@
+@use '../helpers' as *;
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+}

@@ -1,0 +1,18 @@
+@use './normalize';
+@use './fonts';
+@use './variables';
+@use './utils';
+@use './globals';
+
+@use './blocks/header';
+@use './blocks/days';
+@use './blocks/days-card';
+@use './blocks/tabs';
+@use './blocks/task-card';
+@use './blocks/checkbox';
+@use './blocks/task-category-list';
+@use './blocks/tasks-list';
+@use './blocks/task-add';
+@use './blocks/modal-add-task';
+@use './blocks/dark-bg';
+@use './blocks/field';

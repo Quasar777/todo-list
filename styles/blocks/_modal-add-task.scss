@@ -1,0 +1,28 @@
+@use '../helpers' as *; 
+
+.modal-add-task {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: rem(20);
+    // border: var(--border);
+    border-radius: rem(12);
+    background-color: var(--color-light-grey);
+    z-index: 20;
+    transition-duration: var(--transition-duration);
+
+    &__button {
+        background-color: var(--color-dark);
+        border: none;
+        border-radius: rem(6);
+        color: var(--color-light);
+        padding-block: rem(5);
+    }
+
+    #add-task-form {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+    }
+}

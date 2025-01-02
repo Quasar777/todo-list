@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>туду</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js" type="module" defer></script>
+    <script src="./scripts/AddTaskSystem.js" type="module" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner container">
+            <h1 class="header__title">Планы на неделю</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="days" aria-labelledby="days-title">
+            <div class="days__body tabs" data-js-tabs>
+                <h2 class="visually-hidden" id="days-title">День недели</h2>
+                <header class="tabs__header">
+                    <div 
+                        class="tabs__buttons" 
+                        role="tablist"
+                        aria-labelledby="days-title"
+                    >
+                        <button 
+                            class="tabs__button is-active"
+                            id="tab-1"
+                            type="button"                    
+                            role="tab"
+                            aria-controls="tabpanel-1"
+                            data-js-tabs-button
+                            aria-selected="true"
+                        >
+                            <div class="tabs__button-content days-card">
+                                <p class="days-card__weekday">ПН</p>
+                                <p class="days-card__date">1</p>
+                            </div>
+                        </button>
+                        <button 
+                            class="tabs__button"
+                            id="tab-2"
+                            type="button"                    
+                            role="tab"
+                            aria-controls="tabpanel-2"
+                            data-js-tabs-button
+                            aria-selected="false"
+                            tabindex="-1"
+                        >
+                            <div class="tabs__button-content days-card">
+                                <p class="days-card__weekday">ВТ</p>
+                                <p class="days-card__date">2</p>
+                            </div>
+                        </button>
+                        <button 
+                            class="tabs__button"
+                            id="tab-3"
+                            type="button"                    
+                            role="tab"
+                            aria-controls="tabpanel-3"
+                            data-js-tabs-button
+                            aria-selected="false"
+                            tabindex="-1"
+                        >
+                            <div class="tabs__button-content days-card">
+                                <p class="days-card__weekday">СР</p>
+                                <p class="days-card__date">3</p>
+                            </div>
+                        </button>
+                        <button 
+                            class="tabs__button"
+                            id="tab-4"
+                            type="button"                    
+                            role="tab"
+                            aria-controls="tabpanel-4"
+                            data-js-tabs-button
+                            aria-selected="false"
+                            tabindex="-1"
+                        >
+                            <div class="tabs__button-content days-card">
+                                <p class="days-card__weekday">ЧТ</p>
+                                <p class="days-card__date">4</p>
+                            </div>
+                        </button>
+                        <button 
+                            class="tabs__button"
+                            id="tab-5"
+                            type="button"                    
+                            role="tab"
+                            aria-controls="tabpanel-5"
+                            data-js-tabs-button
+                            aria-selected="false"
+                            tabindex="-1"
+                        >
+                            <div class="tabs__button-content days-card">
+                                <p class="days-card__weekday">ПТ</p>
+                                <p class="days-card__date">5</p>
+                            </div>
+                        </button>
+                        <button 
+                            class="tabs__button"
+                            id="tab-6"
+                            type="button"                    
+                            role="tab"
+                            aria-controls="tabpanel-6"
+                            data-js-tabs-button
+                            aria-selected="false"
+                            tabindex="-1"
+                        >
+                            <div class="tabs__button-content days-card">
+                                <p class="days-card__weekday">СБ</p>
+                                <p class="days-card__date">6</p>
+                            </div>
+                        </button>
+                        <button 
+                            class="tabs__button"
+                            id="tab-7"
+                            type="button"                    
+                            role="tab"
+                            aria-controls="tabpanel-7"
+                            data-js-tabs-button
+                            aria-selected="false"
+                            tabindex="-1"
+                        >
+                            <div class="tabs__button-content days-card">
+                                <p class="days-card__weekday">ВСК</p>
+                                <p class="days-card__date">7</p>
+                            </div>
+                        </button>
+                    </div>
+                </header>
+                <div class="tabs__body">
+                    <div 
+                        class="tabs__content is-active" 
+                        id="tabpanel-1"
+                        aria-labelledby="tab-1"
+                        tabindex="0"
+                        data-js-tabs-content
+                    >
+                        <ul class="task-category-list container" data-js-tasks-main-list>
+                            <li class="task-category-list__item">
+                                <p class="task-category-list__item-title">Разработка</p>
+                                <ul class="tasks-list">
+                                    <li class="tasks-list__item task-card">
+                                        <label class="checkbox">
+                                            <input
+                                              class="checkbox__input"
+                                              type="checkbox"
+                                              required
+                                            />
+                                            <span class="checkbox__label">Доделать todo-list</span>
+                                        </label>
+                                    </li>
+                                    <li class="tasks-list__item task-card">
+                                        <label class="checkbox">
+                                            <input
+                                              class="checkbox__input"
+                                              type="checkbox"
+                                              required
+                                            />
+                                            <span class="checkbox__label">Доделать еще что-то</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="task-category-list__item">
+                                <p class="task-category-list__item-title">Дом</p>
+                                <ul class="tasks-list" data-js-tasks-inner-list>
+                                    <li class="tasks-list__item task-card">
+                                        <label class="checkbox">
+                                            <input
+                                              class="checkbox__input"
+                                              type="checkbox"
+                                              required
+                                            />
+                                            <span class="checkbox__label">неважно 1</span>
+                                        </label>
+                                    </li>
+                                    <li class="tasks-list__item task-card">
+                                        <label class="checkbox">
+                                            <input
+                                              class="checkbox__input"
+                                              type="checkbox"
+                                              required
+                                            />
+                                            <span class="checkbox__label">Неважно 2</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div 
+                        class="tabs__content" 
+                        id="tabpanel-2"
+                        aria-labelledby="tab-2"
+                        tabindex="0"
+                        data-js-tabs-content
+                    >
+                        <ul class="task-category-list container" data-js-tasks-main-list>
+                        </ul>
+                    </div>
+                    <div 
+                        class="tabs__content" 
+                        id="tabpanel-3"
+                        aria-labelledby="tab-3"
+                        tabindex="0"
+                        data-js-tabs-content
+                    >
+                        <ul class="task-category-list container" data-js-tasks-main-list>
+                        </ul>
+                    </div>
+                    <div 
+                        class="tabs__content" 
+                        id="tabpanel-4"
+                        aria-labelledby="tab-4"
+                        tabindex="0"
+                        data-js-tabs-content
+                    >
+                        <ul class="task-category-list container" data-js-tasks-main-list>
+                        </ul>
+                    </div>
+                    <div 
+                        class="tabs__content" 
+                        id="tabpanel-5"
+                        aria-labelledby="tab-5"
+                        tabindex="0"
+                        data-js-tabs-content
+                    >
+                        <ul class="task-category-list container" data-js-tasks-main-list>
+                        </ul>
+                    </div>
+                    <div 
+                        class="tabs__content" 
+                        id="tabpanel-6"
+                        aria-labelledby="tab-6"
+                        tabindex="0"
+                        data-js-tabs-content
+                    >
+                        <ul class="task-category-list container" data-js-tasks-main-list>
+                        </ul>
+                    </div>
+                    <div 
+                        class="tabs__content" 
+                        id="tabpanel-7"
+                        aria-labelledby="tab-7"
+                        tabindex="0"
+                        data-js-tabs-content
+                    >
+                        <ul class="task-category-list container" data-js-tasks-main-list>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+            <div class="task-add container">
+                <input class="task-add__input" type="text" placeholder="Добавить задачу">
+                <button class="task-add__button" type="button" data-js-add-task-button>+</button>
+            </div>            
+        </section>
+        <div class="modal-add-task" data-js-modal-add-task>
+            <form id="add-task-form">
+                <p class="field">
+                    <label class="field__label" for="category">Категория:</label>
+                    <input class="field__input" type="text" id="category" name="category" data-js-task-category-add-input>
+                </p>
+                <p class="field">
+                    <label class="field__label" for="task">Задача:</label>
+                    <input class="field__input" type="text" id="task" name="category" data-js-task-add-input>
+                </p>
+                <button class="modal-add-task__button" type="button" data-js-confirm-task-button>Добавить</button>
+            </form>
+        </div>
+        <div class="dark-bg" data-js-dark-bg></div>
+    </main>
+</body>
+</html>

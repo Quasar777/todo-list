@@ -1,0 +1,34 @@
+@use '../helpers' as *;
+
+.tabs {
+    &__buttons {
+        display: flex;
+        padding-block: rem(32);
+        overflow-x: auto;
+        
+        @include mobile-above {
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+
+        &.is-active {
+            .tabs__button-content {
+                border: none;
+                background-color: var(--color-day-card);
+                pointer-events: none;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__content {
+        &:not(.is-active ){
+            display: none;
+        }
+
+    }
+}
