@@ -387,6 +387,7 @@ button[aria-label]::before {
 }
 
 .checkbox {
+  -webkit-tap-highlight-color: transparent;
   width: 100%;
   display: inline-flex;
   align-items: center;

@@ -26,15 +26,8 @@ function showModal() {
 function checkCategory(category) {
     category = category.toLowerCase()
     let hasCategory = false
-    let currentTabContent = null
     const tabsBody = document.querySelector('.tabs__body')
-    const contentElements = [...tabsBody.querySelectorAll('.tabs__content')]
-    
-    contentElements.forEach((elem) => {
-        if (elem.classList.contains('is-active')) {
-            currentTabContent = elem
-        }
-    })
+    let currentTabContent = tabsBody.querySelector('.tabs__content.is-active')
 
     let currentTaskCategoryList = currentTabContent.querySelector(selectors.mainList)
     let currentCategoryItems = [...currentTaskCategoryList.children]
@@ -61,26 +54,11 @@ function createNewCategory(category, task) {
     let newTaskListElement = document.createElement("ul")
     newTaskListElement.classList.add("tasks-list")
 
-    let newTaskElement = document.createElement("li")
-    newTaskElement.classList.add("tasks-list__item", 'task-card')
-
-    let newCheckboxLabelElement = document.createElement("label")
-    newCheckboxLabelElement.classList.add("checkbox")
-
-    let newChecboxInputElement = document.createElement("input")
-    newChecboxInputElement.classList.add("checkbox__input")
-    newChecboxInputElement.type = "checkbox"
-    newCheckboxLabelElement.append(newChecboxInputElement)
-
-    let newSpanElement = document.createElement("span")
-    newSpanElement.classList.add("checkbox__label")
-    newSpanElement.textContent = `${task}`
+    let newTaskElement = createNewTask(task)
     
     newCategoryItemElement.append(newCategoryItemTitleElement)
     newCategoryItemElement.append(newTaskListElement)
     newTaskListElement.append(newTaskElement)
-    newTaskElement.append(newCheckboxLabelElement)
-    newCheckboxLabelElement.append(newSpanElement)
 
     return newCategoryItemElement
     
@@ -103,7 +81,6 @@ function createNewTask(task) {
     newSpanElement.textContent = `${task}`
 
     newTaskElement.append(newCheckboxLabelElement)
-    
     newCheckboxLabelElement.append(newSpanElement)
 
     return newTaskElement

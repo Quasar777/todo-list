@@ -1,6 +1,9 @@
 @use '../helpers' as *;
 
 .checkbox {
+    // фикс синего фона при нажатии на мобилках
+    -webkit-tap-highlight-color: transparent;
+    
     width: 100%;
     display: inline-flex;
     align-items: center;
@@ -18,7 +21,6 @@
         margin: 0;
         background-color: transparent;
         border-radius: rem(6);
-        
 
         @include laptop {
             --size: #{rem(24)};
