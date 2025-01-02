@@ -260,14 +260,35 @@
             </div>            
         </section>
         <div class="modal-add-task visually-hidden" data-js-modal-add-task>
-            <form id="add-task-form">
+            <form id="add-task-form" data-js-add-task-form>
                 <p class="field">
                     <label class="field__label" for="category">Категория:</label>
-                    <input class="field__input" type="text" id="category" name="category" data-js-task-category-add-input>
+                    <input 
+                        class="field__input" 
+                        type="text" 
+                        id="category" 
+                        name="category" 
+                        minlength="2"
+                        maxlength="25"
+                        data-js-task-category-add-input
+                        
+                    />
+                    <span class="field__errors" id="category-errors" data-js-form-field-error></span>
                 </p>
+                
                 <p class="field">
                     <label class="field__label" for="task">Задача:</label>
-                    <input class="field__input" type="text" id="task" name="category" data-js-task-add-input>
+                    <input 
+                        class="field__input" 
+                        type="text" 
+                        id="task" 
+                        name="category" 
+                        minlength="2"
+                        maxlength="50"
+                        data-js-task-add-input
+                        
+                    />
+                    <span class="field__errors" id="task-errors" data-js-form-field-error></span>
                 </p>
                 <button class="modal-add-task__button" type="button" data-js-confirm-task-button>Добавить</button>
             </form>

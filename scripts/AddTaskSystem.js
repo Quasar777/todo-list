@@ -29,6 +29,10 @@ function checkCategory(category) {
     const tabsBody = document.querySelector('.tabs__body')
     let currentTabContent = tabsBody.querySelector('.tabs__content.is-active')
 
+    if (!currentTabContent) {
+        throw new Error("контент таба не найден")
+    }
+
     let currentTaskCategoryList = currentTabContent.querySelector(selectors.mainList)
     let currentCategoryItems = [...currentTaskCategoryList.children]
 
@@ -104,7 +108,12 @@ function addNewTask(category, task) {
     
         currentTaskItem.append(createNewTask(task))
     } else {
-        currentTaskCategoryList.append(createNewCategory(category, task))
+        if (currentTaskCategoryList) {
+            currentTaskCategoryList.append(createNewCategory(category, task))
+        } else {
+            throw new Error("не удалось найти список задач для текущей категории.")
+        }
+        
     }  
     
 
@@ -127,7 +136,4 @@ const onModalButtonClick = () => {
 }
 
 addTaskButtonElement.addEventListener("click", onAddButtonClick)
-
 modalAddTaskButtonElement.addEventListener("click", onModalButtonClick)
-
-
