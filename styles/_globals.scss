@@ -54,6 +54,8 @@ a {
 
 a, 
 button {
+    // фикс синего фона при нажатии на мобилках
+    -webkit-tap-highlight-color: transparent;
     &[aria-label] {
         position: relative;
 

@@ -322,6 +322,10 @@ a[class] {
   transition-duration: 0.2s;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
 a[aria-label],
 button[aria-label] {
   position: relative;
