@@ -341,6 +341,9 @@ button[aria-label]::before {
   padding-block: 1.875rem;
   text-align: center;
 }
+.header__title {
+  color: var(--color-categories);
+}
 
 .days-card {
   min-width: 4.25rem;

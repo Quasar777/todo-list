@@ -5,4 +5,8 @@
         padding-block: rem(30);
         text-align: center;
     }
+
+    &__title {
+        color: var(--color-categories);
+    }
 }
