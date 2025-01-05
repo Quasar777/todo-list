@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>туду</title>
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/main.js" type="module" defer></script>
@@ -147,21 +148,29 @@
                                         <label class="checkbox">
                                             <input
                                               class="checkbox__input"
-                                              type="checkbox"
-                                              required
+                                              type="checkbox"                                              
                                             />
                                             <span class="checkbox__label">Доделать todo-list</span>
                                         </label>
+                                        <button 
+                                            class="task-card__delete-button" 
+                                            type="button"
+                                            data-js-delete-task-button    
+                                        >✕</button>
                                     </li>
                                     <li class="tasks-list__item task-card">
                                         <label class="checkbox">
                                             <input
                                               class="checkbox__input"
-                                              type="checkbox"
-                                              required
+                                              type="checkbox"                                              
                                             />
                                             <span class="checkbox__label">Доделать еще что-то</span>
                                         </label>
+                                        <button 
+                                            class="task-card__delete-button" 
+                                            type="button"
+                                            data-js-delete-task-button    
+                                        >✕</button>
                                     </li>
                                 </ul>
                             </li>
@@ -172,22 +181,16 @@
                                         <label class="checkbox">
                                             <input
                                               class="checkbox__input"
-                                              type="checkbox"
-                                              required
+                                              type="checkbox"                                              
                                             />
                                             <span class="checkbox__label">неважно 1</span>
                                         </label>
-                                    </li>
-                                    <li class="tasks-list__item task-card">
-                                        <label class="checkbox">
-                                            <input
-                                              class="checkbox__input"
-                                              type="checkbox"
-                                              required
-                                            />
-                                            <span class="checkbox__label">Неважно 2</span>
-                                        </label>
-                                    </li>
+                                        <button 
+                                            class="task-card__delete-button" 
+                                            type="button"
+                                            data-js-delete-task-button    
+                                        >✕</button>
+                                    </li>                                    
                                 </ul>
                             </li>
                         </ul>

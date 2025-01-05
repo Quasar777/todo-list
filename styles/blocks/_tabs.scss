@@ -14,6 +14,7 @@
     &__button {
         background-color: transparent;
         border: none;
+        transition-duration: var(--transition-duration);
 
         &.is-active {
             .tabs__button-content {

@@ -2,8 +2,23 @@
 
 .task-card {
     padding: rem(16); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--color-light-grey);
     border-radius: rem(12);
 
+    &__delete-button {
+        @include square(#{rem(30)});
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        border: none;
+        border-radius: 50%;
+        opacity: 0.8;
+        transition-duration: var(--transition-duration);
 
+        @include hover {
+            opacity: 1;
+        }
+    }
 }

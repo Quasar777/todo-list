@@ -8,6 +8,7 @@ const selectors = {
     modalButton: '[data-js-confirm-task-button]',
     modalWindow: '[data-js-modal-add-task]',
     darkBg: '[data-js-dark-bg]',
+    deleteTaskButton: '[data-js-delete-task-button]',
 }
 
 const addTaskButtonElement = document.querySelector(selectors.addTaskButton);
@@ -84,7 +85,15 @@ function createNewTask(task) {
     newSpanElement.classList.add("checkbox__label")
     newSpanElement.textContent = `${task}`
 
+    let newDeleteButtonElement = document.createElement("button")
+    newDeleteButtonElement.setAttribute("type", "button")
+    newDeleteButtonElement.dataset.jsDeleteTaskButton
+    newDeleteButtonElement.classList.add("task-card__delete-button")
+    newDeleteButtonElement.textContent = "✕"
+
+
     newTaskElement.append(newCheckboxLabelElement)
+    newTaskElement.append(newDeleteButtonElement)
     newCheckboxLabelElement.append(newSpanElement)
 
     return newTaskElement
@@ -124,8 +133,8 @@ const onAddButtonClick = () => {
 }
 
 const onModalButtonClick = () => {
-    const categoryInputValue = modalInputCategoryElement.value
-    const taskInputValue = modalInputTaskElement.value
+    const categoryInputValue = modalInputCategoryElement.value.trim()
+    const taskInputValue = modalInputTaskElement.value.trim()
 
     if (categoryInputValue === "" || taskInputValue === "") {
         console.log("ERROR")
@@ -137,3 +146,23 @@ const onModalButtonClick = () => {
 
 addTaskButtonElement.addEventListener("click", onAddButtonClick)
 modalAddTaskButtonElement.addEventListener("click", onModalButtonClick)
+
+
+const deleteTask = (element) => {
+    
+    const parentTasksListElement = element.closest(".tasks-list")
+    const parentTaskElement = element.closest(".task-card")
+    parentTaskElement.remove()
+
+    if (parentTasksListElement.children.length === 0) {
+        parentTasksListElement.closest(".task-category-list__item").remove()
+    }
+
+    
+}
+
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains("task-card__delete-button")) {
+        deleteTask(event.target)
+    }
+})

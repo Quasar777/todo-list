@@ -361,6 +361,7 @@ button[aria-label]::before {
   border-radius: 0.5rem;
   font-weight: 600;
   opacity: 0.2;
+  transition-duration: var(--transition-duration);
 }
 
 .tabs__buttons {
@@ -376,6 +377,7 @@ button[aria-label]::before {
 .tabs__button {
   background-color: transparent;
   border: none;
+  transition-duration: var(--transition-duration);
 }
 .tabs__button.is-active .tabs__button-content {
   border: none;
@@ -389,8 +391,31 @@ button[aria-label]::before {
 
 .task-card {
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--color-light-grey);
   border-radius: 0.75rem;
+}
+.task-card__delete-button {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition-duration: var(--transition-duration);
+}
+@media (any-hover: hover) {
+  .task-card__delete-button:hover {
+    opacity: 1;
+  }
+}
+@media (any-hover: none) {
+  .task-card__delete-button:active {
+    opacity: 1;
+  }
 }
 
 .checkbox {
