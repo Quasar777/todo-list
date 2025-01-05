@@ -5,6 +5,7 @@
         display: flex;
         padding-block: rem(32);
         overflow-x: auto;
+        gap: 0;
         
         @include mobile-above {
             justify-content: center;
@@ -14,7 +15,10 @@
     &__button {
         background-color: transparent;
         border: none;
+        color: var(--color-dark);
         transition-duration: var(--transition-duration);
+        margin: 0;
+    
 
         &.is-active {
             .tabs__button-content {

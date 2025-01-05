@@ -300,7 +300,6 @@ p[x-apple-data-detectors] {
   line-height: inherit !important;
 }
 
-
 a,
 button,
 label,
@@ -379,6 +378,7 @@ button[aria-label]::before {
   display: flex;
   padding-block: 2rem;
   overflow-x: auto;
+  gap: 0;
 }
 @media (width > 47.99875rem) {
   .tabs__buttons {
@@ -388,7 +388,9 @@ button[aria-label]::before {
 .tabs__button {
   background-color: transparent;
   border: none;
+  color: var(--color-dark);
   transition-duration: var(--transition-duration);
+  margin: 0;
 }
 .tabs__button.is-active .tabs__button-content {
   border: none;
