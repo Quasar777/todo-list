@@ -290,6 +290,16 @@ main {
   flex-grow: 1;
 }
 
+div[x-apple-data-detectors],
+p[x-apple-data-detectors] {
+  color: inherit !important; /* Следуйте общему стилю */
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
 a,
 button,
 label,
@@ -398,10 +408,10 @@ button[aria-label]::before {
   border-radius: 0.75rem;
 }
 .task-card__delete-button {
-  width: 1.875rem;
-  height: 1.875rem;
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: transparent;
+  color: var(--color-dark);
+  text-align: center;
+  font-weight: 700;
   border: none;
   border-radius: 50%;
   opacity: 0.8;

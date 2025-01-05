@@ -21,6 +21,16 @@ main {
     flex-grow: 1;
 }
 
+div[x-apple-data-detectors],
+p[x-apple-data-detectors] {
+    color: inherit !important; /* Следуйте общему стилю */
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
 
 // добавляем плавности для интерактивных элементов
 a,
